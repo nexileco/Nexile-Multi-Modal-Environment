@@ -1,0 +1,86 @@
+{
+  "name": "cursor-router-chat",
+  "displayName": "Nexile Multi Model Environment",
+  "description": "OpenRouter, Groq, Gemini, and Mistral coding chat with cross-provider routing, sub-agents, workspace tools, and terminal access.",
+  "version": "0.21.0",
+  "publisher": "local-dev",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:routerChat.openChat",
+    "onView:routerChat.chat"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "routerChatSidebar",
+          "title": "Nexile Multi Model Environment",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "routerChatSidebar": [
+        {
+          "type": "webview",
+          "id": "routerChat.chat",
+          "name": "Chat",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "routerChat.openChat",
+        "title": "Nexile Multi Model Environment: Open Chat"
+      },
+      {
+        "command": "routerChat.setApiKey",
+        "title": "Nexile Multi Model Environment: Set API Key"
+      },
+      {
+        "command": "routerChat.clearChat",
+        "title": "Nexile Multi Model Environment: Clear Chat"
+      },
+      {
+        "command": "routerChat.openAgents",
+        "title": "Nexile Multi Model Environment: Manage Agents"
+      },
+      {
+        "command": "routerChat.openSettings",
+        "title": "Nexile Multi Model Environment: Open Settings"
+      },
+      {
+        "command": "routerChat.restoreEdit",
+        "title": "Nexile Multi Model Environment: Restore Agent Edit"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "routerChat.openChat",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "test": "npm run compile && node tests/webview.test.cjs",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.3.2",
+    "typescript": "^5.3.3"
+  }
+}
