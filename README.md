@@ -1,12 +1,10 @@
 # Nexile Multi Model Environment 0.21.0
-
+NMME - Nexile Multi Modal Environment VSCode/Cursor Extension
 ## Install from VSIX
 
 1. Download the `.vsix` file (e.g., `cursor-router-chat-0.21.0.vsix`).
 2. In VS Code or Cursor, open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Extensions: Install from VSIX...**.
 3. Select the `.vsix` file and confirm. The extension installs and appears in the Activity Bar sidebar.
-
-NMME - Nexile Multi Agent Environment VSCode/Cursor Extension
 
 
 An independent coding chat extension for Cursor and VS Code. It supports OpenRouter, Groq, Google Gemini, and Mistral, provider-only API-key setup, automatic model routing with sequential failover and focused delegation, custom agent instructions, and workspace tools.
