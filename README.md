@@ -1,6 +1,6 @@
 # Nexile Multi Model Environment 0.21.0
 
-NMME - Nexile Multi Agent Environment VSCode/Cursor Extension
+NMME - Nexile Multi Modal Environment VSCode/Cursor Extension
 
 
 An independent coding chat extension for Cursor and VS Code. It supports OpenRouter, Groq, Google Gemini, and Mistral, provider-only API-key setup, automatic model routing with sequential failover and focused delegation, custom agent instructions, and workspace tools.
